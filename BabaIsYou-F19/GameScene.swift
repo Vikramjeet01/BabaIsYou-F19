@@ -62,22 +62,72 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
                     self.wallT.physicsBody?.categoryBitMask = 4
                     self.wallT.physicsBody?.collisionBitMask = 0
-                    self.wallT.physicsBody?.contactTestBitMask = 0        }
+                    self.wallT.physicsBody?.contactTestBitMask = 0
+            
+            self.wallL.physicsBody?.categoryBitMask = 4
+            self.wallL.physicsBody?.collisionBitMask = 0
+            self.wallL.physicsBody?.contactTestBitMask = 0
+            
+            self.wallB.physicsBody?.categoryBitMask = 4
+            self.wallB.physicsBody?.collisionBitMask = 0
+            self.wallB.physicsBody?.contactTestBitMask = 0
+            
+            self.wallR.physicsBody?.categoryBitMask = 4
+            self.wallR.physicsBody?.collisionBitMask = 0
+            self.wallR.physicsBody?.contactTestBitMask = 0
+        }
         else{
                     self.wallT.physicsBody?.categoryBitMask = 2
                     self.wallT.physicsBody?.collisionBitMask = 4
                     self.wallT.physicsBody?.contactTestBitMask = 1
+            
+            self.wallL.physicsBody?.categoryBitMask = 2
+            self.wallL.physicsBody?.collisionBitMask = 4
+            self.wallL.physicsBody?.contactTestBitMask = 1
+            
+            self.wallB.physicsBody?.categoryBitMask = 2
+            self.wallB.physicsBody?.collisionBitMask = 4
+            self.wallB.physicsBody?.contactTestBitMask = 1
+            
+            self.wallR.physicsBody?.categoryBitMask = 2
+            self.wallR.physicsBody?.collisionBitMask = 4
+            self.wallR.physicsBody?.contactTestBitMask = 1
         }
         
         if (nodeA!.name == "stopblock" && nodeB!.name == "isblock1") {
             print("Resul: You WIn")
                 self.wallT.physicsBody?.categoryBitMask = 4
                             self.wallT.physicsBody?.collisionBitMask = 0
-                            self.wallT.physicsBody?.contactTestBitMask = 0        }
+                            self.wallT.physicsBody?.contactTestBitMask = 0
+            
+            self.wallL.physicsBody?.categoryBitMask = 4
+            self.wallL.physicsBody?.collisionBitMask = 0
+            self.wallL.physicsBody?.contactTestBitMask = 0
+            
+            self.wallB.physicsBody?.categoryBitMask = 4
+            self.wallB.physicsBody?.collisionBitMask = 0
+            self.wallB.physicsBody?.contactTestBitMask = 0
+            
+            self.wallR.physicsBody?.categoryBitMask = 4
+            self.wallR.physicsBody?.collisionBitMask = 0
+            self.wallR.physicsBody?.contactTestBitMask = 0
+        }
                 else{
                             self.wallT.physicsBody?.categoryBitMask = 2
                             self.wallT.physicsBody?.collisionBitMask = 4
                             self.wallT.physicsBody?.contactTestBitMask = 1
+            
+            self.wallL.physicsBody?.categoryBitMask = 2
+            self.wallL.physicsBody?.collisionBitMask = 4
+            self.wallL.physicsBody?.contactTestBitMask = 1
+            
+            self.wallB.physicsBody?.categoryBitMask = 2
+            self.wallB.physicsBody?.collisionBitMask = 4
+            self.wallB.physicsBody?.contactTestBitMask = 1
+            
+            self.wallR.physicsBody?.categoryBitMask = 2
+            self.wallR.physicsBody?.collisionBitMask = 4
+            self.wallR.physicsBody?.contactTestBitMask = 1
         }
         
         if (nodeA!.name == "isblock1" && nodeB!.name == "winblock") {

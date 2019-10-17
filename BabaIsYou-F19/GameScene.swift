@@ -50,19 +50,55 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         let nodeA = contact.bodyA.node
         let nodeB = contact.bodyB.node
-        //let nodeC = contact.bodyC.node
         
         if (nodeA == nil || nodeB == nil ) {
             return
         }
         
-        if (nodeA!.name == "player" && nodeB!.name == "stopblock") {
+        if (nodeA!.name == "isblock1" && nodeB!.name == "stopblock") {
+            print("Resul: You WIn")
+            
+           //self.wallT.physicsBody = SKPhysicsBody(edgeFrom: <#T##CGPoint#>, to: <#T##CGPoint#>)
+            
+                    self.wallT.physicsBody?.categoryBitMask = 4
+                    self.wallT.physicsBody?.collisionBitMask = 0
+                    self.wallT.physicsBody?.contactTestBitMask = 0        }
+        else{
+                    self.wallT.physicsBody?.categoryBitMask = 2
+                    self.wallT.physicsBody?.collisionBitMask = 4
+                    self.wallT.physicsBody?.contactTestBitMask = 1
+        }
+        
+        if (nodeA!.name == "stopblock" && nodeB!.name == "isblock1") {
+            print("Resul: You WIn")
+                self.wallT.physicsBody?.categoryBitMask = 4
+                            self.wallT.physicsBody?.collisionBitMask = 0
+                            self.wallT.physicsBody?.contactTestBitMask = 0        }
+                else{
+                            self.wallT.physicsBody?.categoryBitMask = 2
+                            self.wallT.physicsBody?.collisionBitMask = 4
+                            self.wallT.physicsBody?.contactTestBitMask = 1
+        }
+        
+        if (nodeA!.name == "isblock1" && nodeB!.name == "winblock") {
+            print("Resul: You WIn")
+            
+        }
+        
+        if (nodeA!.name == "winblock" && nodeB!.name == "isblock1") {
             print("Resul: You WIn")
         }
         
-        if (nodeA!.name == "player" && nodeB!.name == "isblock1") {
+        if (nodeA!.name == "isblock2" && nodeB!.name == "winblock") {
+            print("Resul: You WIn")
+            
+        }
+        
+        if (nodeA!.name == "winblock" && nodeB!.name == "isblock2") {
             print("Resul: You WIn")
         }
+        
+        
     }
     
     override func update(_ currentTime: TimeInterval) {

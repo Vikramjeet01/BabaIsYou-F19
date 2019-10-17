@@ -56,7 +56,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             return
         }
         
-        if (nodeA!.name == "player" && nodeB!.name == "flag") {
+        if (nodeA!.name == "player" && nodeB!.name == "stopblock") {
+            print("Resul: You WIn")
+        }
+        
+        if (nodeA!.name == "player" && nodeB!.name == "isblock1") {
             print("Resul: You WIn")
         }
     }
